@@ -1,0 +1,8 @@
+{
+  "phpcs.standard": "WordPress",
+  "phpcbf.standard": "WordPress",
+  "phpcs.showWarnings": false,
+  "phpcs.enable": false,
+  "phpcbf.enable": false,
+  "phpcs.autoConfigSearch": false,
+}
