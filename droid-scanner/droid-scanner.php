@@ -13,12 +13,21 @@ Version: 1.0
 Author: Lockr
 Author URI: htts://www.deathstarsecurity.com/
 License: GPLv2 or later
-Text Domain: lockr
+Domain Path: /languages
+Text Domain: droid-scanner
+Tested up to: 5.4
 */
 
 define( 'DROIDSCANNER__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DROIDSCANNER__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
+/**
+ * Load plugin text domain
+ */
+function droidscanner_load_plugin_textdomain(){
+	load_plugin_textdomain('droid-scanner', FALSE,	dirname(plugin_basename(__FILE__)) . '/languages');
+}
+add_action( 'init', 'droidscanner_load_plugin_textdomain' );
 
 /**
  * Include our admin functions.
@@ -78,30 +87,30 @@ function droid_scanner_install() {
 }
 
 function droid_scanner_targeting_form() {
-	echo '<h2> Interested in working for our dynamic and industry leading team?</h2>';
+	echo '<h2>' . __('Interested in working for our dynamic and industry leading team?', 'droid-scanner') . '</h2>';
 	echo '<p>';
-	echo "We at Death Star Security are always looking for the best of the best to help secure our clients. Fill out the form below to get in contact with one of our managers.";
+	echo __('We at Death Star Security are always looking for the best of the best to help secure our clients. Fill out the form below to get in contact with one of our managers.', 'droid-scanner');
 	echo '</p>';
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 	echo '<p>';
 	// BAD! INJECTING FROM INPUT VARIABLE DIRECTLY INTO PAGE OUTPUT.
-	echo 'What is your Name?<br/>';
+	echo __('What is your name?', 'droid-scanner') . '<br/>';
 	echo '<input type="text" name="target-name" value="' . ( isset( $_GET["target-name"] ) ? $_GET["target-name"] : '' ) . '" size="40" />';
-	echo 'What is your email?<br/>';
+	echo __('What is your email?', 'droid-scanner') . '<br/>';
 	echo '<input type="email" name="target-email" value="' . ( isset( $_GET["target-email"] ) ? $_GET["target-email"] : '' ) . '" size="40" />';
 	echo '<p>';
-	echo 'What type of leader would you say you are? <br/>';
+	echo __('What type of leader would you say you are?', 'droid-scanner') . '<br/>';
 	echo '<select name="target-inspire">';
-  echo '<option value="snoke">Supreme Leader Snoke</option>';
-  echo '<option value="kylo">Kylo Ren</option>';
-  echo '<option value="hux">General Hux</option>';
-	echo '<option value="phasma">Captain Phasma</option>';
-	echo '<option value="vader">Darth Vader</option>';
-	echo '<option value="emperor">Emperor Palpatine</option>';
+  echo '<option value="snoke">' . __('Supreme Leader Snoke', 'droid-scanner') . '</option>';
+  echo '<option value="kylo">' . __('Kylo Ren', 'droid-scanner') . '</option>';
+  echo '<option value="hux">' . __('General Hux', 'droid-scanner') . '</option>';
+	echo '<option value="phasma">' . __('Captain Phasma', 'droid-scanner') . '</option>';
+	echo '<option value="vader">' . __('Darth Vader', 'droid-scanner') . '</option>';
+	echo '<option value="emperor">' . __('Emperor Palpatine', 'droid-scanner') . '</option>';
 	echo '</select>';
 	echo '</p>';
 	echo '<p> &nbsp; </p>';
-	echo '<p><input type="submit" name="target-acquired" value="Submit" /></p>';
+	echo '<p><input type="submit" name="target-acquired" value="' . __('Submit', 'droid-scanner') . '" /></p>';
 	echo '</form>';
 }
 
@@ -129,7 +138,7 @@ function droid_scanner_targeting_process() {
 
 		if( $storage ) {
 			echo '<div>';
-			echo '<p>Input recieved. Thanks customer!</p>';
+			echo '<p>' . __('Input recieved. Thanks customer!', 'droid-scanner') . '</p>';
 			echo '</div>';
 		}
 	}

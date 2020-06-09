@@ -14,7 +14,7 @@ Version: 1.0
 Author: Lockr
 Author URI: htts://www.deathstarsecurity.com/
 License: GPLv2 or later
-Text Domain: lockr
+Text Domain: storm-trooper-targeting
  */
 
 // Don't call the file directly and give up info!
@@ -32,12 +32,21 @@ if ( ! function_exists( 'add_action' ) ) {
 register_activation_hook( __FILE__, 'storm_trooper_install' );
 
 /**
+ * Load plugin text domain
+ */
+function exhaust_port_seo_load_plugin_textdomain()
+{
+	load_plugin_textdomain('storm-trooper-targeting', FALSE,	dirname(plugin_basename(__FILE__)) . '/languages');
+}
+add_action('init', 'exhaust_port_seo_load_plugin_textdomain');
+
+/**
  * Initial setup when the plugin is activated.
  */
 function storm_trooper_install() {
 	// Create the page for this exploit.
 	$my_post = array(
-		'post_title'   => wp_strip_all_tags( 'Storm Trooper Customer Targeting' ),
+		'post_title'   => wp_strip_all_tags( __('Storm Trooper Customer Targeting', 'storm-trooper-targeting') ),
 		'post_content' => '[storm_trooper_targeting]',
 		'post_status'  => 'publish',
 		'post_author'  => 1,
@@ -49,26 +58,26 @@ function storm_trooper_install() {
 }
 
 function storm_trooper_targeting_form() {
-	echo '<h2> Are you ready for the best customer experience of your life?!</h2>';
+	echo '<h2>' . __('Are you ready for the best customer experience of your life?!', 'storm-trooper-targeting') . '</h2>';
 	echo '<p>';
-	echo "We at Death Star Security are dedicated to serving you as a customer. But before we do, we need to make sure we know who we're dealing with. Fill out the form below and we'll get in touch with you right away.";
+	echo __('We at Death Star Security are dedicated to serving you as a customer. But before we do, we need to make sure we know who we\'re dealing with. Fill out the form below and we\'ll get in touch with you right away.', 'storm-trooper-targeting');
 	echo '</p>';
 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 	echo '<p>';
-	echo 'What is your email?<br/>';
+	echo __('What is your email?', 'storm-trooper-targeting') . '<br/>';
 	// BAD! INJECTING FROM INPUT VARIABLE DIRECTLY INTO PAGE OUTPUT.
 	echo '<input type="email" name="target-email" value="' . ( isset( $_POST["target-email"] ) ? $_POST["target-email"] : '' ) . '" size="40" />';
 	echo '<p>';
-	echo 'Who is your commanding officer <br/>';
+	echo __('Who is your commanding officer', 'storm-trooper-targeting') . '<br/>';
 	echo '<select name="target-commander">';
-  echo '<option value="snoke">Supreme Leader Snoke</option>';
-  echo '<option value="kylo">Kylo Ren</option>';
-  echo '<option value="hux">General Hux</option>';
-  echo '<option value="phasma">Captain Phasma</option>';
+  echo '<option value="snoke">'. __('Supreme Leader Snoke', 'storm-trooper-targeting') . '</option>';
+  echo '<option value="kylo">' . __('Kylo Ren', 'storm-trooper-targeting') . '</option>';
+  echo '<option value="hux">' . __('General Hux', 'storm-trooper-targeting') . '</option>';
+  echo '<option value="phasma">' . __('Captain Phasma', 'storm-trooper-targeting') . '</option>';
 	echo '</select>';
 	echo '</p>';
 	echo '<p> &nbsp; </p>';
-	echo '<p><input type="submit" name="target-acquired" value="Submit" /></p>';
+	echo '<p><input type="submit" name="target-acquired" value="' . __('Submit', 'storm-trooper-targeting') . '" /></p>';
 	echo '</form>';
 }
 
@@ -100,7 +109,7 @@ function storm_trooper_targeting_process() {
 			$user->set_role( 'author' );
 
 			// Email the user.
-			wp_mail( $email_address, 'Welcome to Death Star Security!', 'Your Password: ' . $password );
+			wp_mail( $email_address, __('Welcome to Death Star Security!', 'storm-trooper-targeting'), __('Your Password:', 'storm-trooper-targeting') . ' ' . $password );
 
 		}
 
@@ -109,7 +118,7 @@ function storm_trooper_targeting_process() {
 
 		if ( $updated ) {
 			echo '<div>';
-			echo '<p>Input recieved. Thanks customer!</p>';
+			echo '<p>' . __('Input received. Thanks customer!', 'storm-trooper-targeting') . '</p>';
 			echo '</div>';
 		}
 	}

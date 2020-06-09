@@ -21,8 +21,8 @@ class Droid_Scanner_List extends WP_List_Table {
 	public function __construct() {
 		parent::__construct(
 			array(
-				'singular' => __( 'Entry', 'droidscanner' ),
-				'plural'   => __( 'Entries', 'droidscanner' ),
+				'singular' => __( 'Entry', 'droid-scanner' ),
+				'plural'   => __( 'Entries', 'droid-scanner' ),
 				'ajax'     => false,
 			)
 		);
@@ -32,7 +32,7 @@ class Droid_Scanner_List extends WP_List_Table {
 	 *  Text displayed when no entry data is available.
 	 */
 	public function no_items() {
-		esc_attr_e( 'No entries stored yet.', 'sp' );
+		esc_attr_e( 'No entries stored yet.', 'droid-scanner' );
 	}
 
 	/**
@@ -54,9 +54,9 @@ class Droid_Scanner_List extends WP_List_Table {
 	public function get_columns() {
 		$columns = array(
 			'cb'           => '<input type="checkbox" />',
-			'droid_scanner_name'    => __( 'Applicant Name' ),
-			'droid_scanner_email' => __( 'Applicant Email' ),
-			'droid_scanner_inspire'         => __( 'Applicant Inspiration' ),
+			'droid_scanner_name'    => __( 'Applicant Name', 'droid-scanner' ),
+			'droid_scanner_email' => __( 'Applicant Email', 'droid-scanner' ),
+			'droid_scanner_inspire'         => __( 'Applicant Inspiration', 'droid-scanner' ),
 		);
 
 		return $columns;
@@ -153,7 +153,7 @@ class Droid_Scanner_List extends WP_List_Table {
 	 */
 	public function get_bulk_actions() {
 		$actions = array(
-			'bulk-delete' => 'Delete',
+			'bulk-delete' => __('Delete', 'droid-scanner'),
 		);
 
 		return $actions;
