@@ -1,0 +1,139 @@
+# Copyright (C) 2020 Lockr
+# This file is distributed under the same license as the Droid Scanner plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Droid Scanner 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/droid-scanner\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-06-06T09:50:25-04:00\n"
+"PO-Revision-Date: 2020-06-08 18:51-0400\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Domain: droid-scanner\n"
+"Last-Translator: Yordan Soares <contacto@yordansoar.es>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_CR\n"
+
+#. Plugin Name of the plugin
+#: droid-scanner-admin.php:24
+msgid "Droid Scanner"
+msgstr "Droid Scanner"
+
+#. Plugin URI of the plugin
+msgid "https://www.deathstarsecurity.com/"
+msgstr "https://www.deathstarsecurity.com/"
+
+#. Description of the plugin
+msgid "These ARE The droids you are looking for."
+msgstr "Estos son los droides que estás buscando."
+
+#. Author of the plugin
+msgid "Lockr"
+msgstr "Lockr"
+
+#. Author URI of the plugin
+msgid "htts://www.deathstarsecurity.com/"
+msgstr "htts://www.deathstarsecurity.com/"
+
+#: class-droid-scanner-list.php:24
+msgid "Entry"
+msgstr "Entrada"
+
+#: class-droid-scanner-list.php:25
+msgid "Entries"
+msgstr "Entradas"
+
+#: class-droid-scanner-list.php:35
+msgid "No entries stored yet."
+msgstr "Aún no hay entradas almacenadas."
+
+#: class-droid-scanner-list.php:57
+msgid "Applicant Name"
+msgstr "Nombre del solicitante"
+
+#: class-droid-scanner-list.php:58
+msgid "Applicant Email"
+msgstr "Correo electrónico del solicitante"
+
+#: class-droid-scanner-list.php:59
+msgid "Applicant Inspiration"
+msgstr "Inspiración del solicitante"
+
+#: class-droid-scanner-list.php:156
+msgid "Delete"
+msgstr "Eliminar"
+
+#: droid-scanner-admin.php:11
+msgid "Lock it up!"
+msgstr "¡Encerrarlo!"
+
+#: droid-scanner-admin.php:38
+msgid "Droid Scanner Entries:"
+msgstr "Entradas de Droid Scanner:"
+
+#: droid-scanner-admin.php:39
+msgid "Below is a list of the entries from the Droid Scanner Forms."
+msgstr ""
+"A continuación se muestra una lista de las entradas de los formularios de "
+"Droid Scanner."
+
+#: droid-scanner.php:90
+msgid "Interested in working for our dynamic and industry leading team?"
+msgstr ""
+"¿Interesado en trabajar con nuestro equipo dinámico y líder en la industria?"
+
+#: droid-scanner.php:92
+msgid ""
+"We at Death Star Security are always looking for the best of the best to "
+"help secure our clients. Fill out the form below to get in contact with one "
+"of our managers."
+msgstr ""
+"En «Death Star Security» siempre estamos buscando lo mejor de lo mejor para "
+"ayudar a proteger a nuestros clientes. Completa el siguiente formulario "
+"para ponerte en contacto con uno de nuestros gerentes."
+
+#: droid-scanner.php:97
+msgid "What is your name?"
+msgstr "¿Cuál es tu nombre?"
+
+#: droid-scanner.php:99
+msgid "What is your email?"
+msgstr "¿Cuál es tu correo electrónico?"
+
+#: droid-scanner.php:102
+msgid "What type of leader would you say you are?"
+msgstr "¿Qué tipo de líder dirías que eres?"
+
+#: droid-scanner.php:104
+msgid "Supreme Leader Snoke"
+msgstr "Líder Supremo Snoke"
+
+#: droid-scanner.php:105
+msgid "Kylo Ren"
+msgstr "Kylo Ren"
+
+#: droid-scanner.php:106
+msgid "General Hux"
+msgstr "General Hux"
+
+#: droid-scanner.php:107
+msgid "Captain Phasma"
+msgstr "Capitán Phasma"
+
+#: droid-scanner.php:108
+msgid "Darth Vader"
+msgstr "Darth Vader"
+
+#: droid-scanner.php:109
+msgid "Emperor Palpatine"
+msgstr "Emperador Palpatine"
+
+#: droid-scanner.php:113
+msgid "Submit"
+msgstr "Enviar"
+
+#: droid-scanner.php:141
+msgid "Input recieved. Thanks customer!"
+msgstr "Entrada recibida. ¡Gracias, cliente!"
